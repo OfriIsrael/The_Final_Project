@@ -1,0 +1,15 @@
+{% extends 'basic_design.html' %}
+
+{% block body %}
+<!--page purpose: allows the user to upload a file to the server,
+which can later be used to create a map -->
+<div class="main-text">
+    <h2>Click Here To Upload Map For It To Get Accepted</h2><br>
+    <form action="/upload_file" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+        <h2> {{msg}}</h2> <!-- presents error messages-->
+    </form>
+</div>
+{% endblock %}
+

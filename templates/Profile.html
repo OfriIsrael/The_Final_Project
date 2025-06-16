@@ -1,0 +1,19 @@
+{% extends 'basic_design.html' %}
+{% block body %}
+<!-- page purpose: show the user his information, and let him both change it or delete his account -->
+<div class=" main-text" id="decently_padded">
+
+    <h1 id="WelcomeUser">Welcome </h1>
+
+    <h2 id="Username">Username: </h2>
+
+    <h2 id="Email">Email: </h2>
+
+    <input ID="DA" type="submit" class="submit-btn" value="Delete Account">
+    <input id="CI" type="submit" class="submit-btn" value="Change Account Information">
+</div>
+
+<!--Script purpose: allow usage of the 'change account information' page and the 'delete account button' -->
+<!-- and also loads user info-->
+<script src="{{url_for('static', filename='js/profile_cmds.js')}}"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'basic_design.html' %}
+
+{% block body %}
+
+<!-- page purpose: show user interface for game page -->
+<div class="container">
+    <div class="positioned-text" id="decently_padded">
+        <h2>
+            <h1 id="first_msg">Click On:</h1>
+            <p id = "success_list"></p>
+            <p id = failed_list></p>
+            <h1 id="place_name"></h1>
+            <div id="timer">00:00:00</div>
+            <input id = "start_button" type="submit" class="submit-btn" value="Start Game" onclick="start_game()">
+        </h2>
+    </div>
+</div>
+<div class="zoom-container">
+    <div class="zoom-target" id="zoomTarget">
+        <!-- Your content here -->
+        <img id=img1 src="{{url_for('static', filename=file)}}" alt="Zoomable Image">
+    </div>
+</div>
+<!--script purpsoe: contains the main methods which are used to manage the game while its being played -->
+<script src="{{url_for('static', filename='js/game_loading.js')}}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'basic_design.html' %}
+{% block body %}
+
+<!--page purpose: allow the user to create a map from a template he had chosen earlier and then play with it -->
+
+<div class="container" id="decently_padded">
+    <div class="positioned-text">
+        Please click on a place's name on the map, enter its name in the field below and then press the submit button
+        <div id="msg"></div>
+    </div>
+    <input id="point_name" type="text" class="textbox" placeholder="Enter Location">
+    <input onclick="SetPointName()" type="submit" class="submit-btn" value="Submit Point Name">
+
+    <input onclick="DelPoint()" type="submit" class="submit-btn" value="Delete Recent Click">
+
+    <input id="map_name" type="text" class="textbox" placeholder="Enter Map Name (Before Pressing Finish)">
+    <input type="submit" class="submit-btn" value="Finish Map" onclick="SendToDatabase()">
+</div>
+<div class="zoom-container">
+    <div class="zoom-target" id="zoomTarget">
+        <!-- Your content here -->
+        <img id=img1 src="{{url_for('static', filename=file)}}" alt="Zoomable Image">
+    </div>
+</div>
+<!--script purpose: listens to when a user clicks on the map, and registers the point
+ he has click on onto the protocoled data structure which would be sent to the server later on -->
+<script src="{{url_for('static', filename='js/click.js')}}"></script>
+<!-- script purpose: misc commands -->
+<script src="{{url_for('static', filename='js/map_making_cmds.js')}}"></script>
+
+{% endblock %}

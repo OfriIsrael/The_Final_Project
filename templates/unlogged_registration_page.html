@@ -1,0 +1,32 @@
+{% extends 'unlogged_basic_template.html' %}
+
+{% block body %}
+
+<div class="main-text"> <!-- Page gets inputs of user and attempts to register him -->
+    <h4>
+        <form id="SignForm" action="/unlogged_registration_page" method="POST">
+
+            <label for="Username"> Username:</label> <br>
+            <input type="text" id="Username" name="Username" value="{{Username}}"><br>
+
+            <label for="Password">Password:</label><br>
+            <input type="password" id="Password" name="Password" value="{{Password}}">
+
+            <label for="Confirm_password">Confirm Password:</label><br>
+            <input type="password" id="Confirm_password" name="Confirm_Password" value="{{Confirm_Password}}">
+
+            <label for="Email">Email:</label><br>
+            <input type="Email" id="Email" name="Email" value="{{Email}}">
+
+            <label for="Age">BirthDate:</label><br>
+            <input type="date" id="Age" name="Age" value="{{Age}}">
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </h4>
+    <h2>If you don't have an account, press Register</h2>
+    <h3>{{msg}}</h3> <!--shows error messages -->
+
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> <!-- This File's Purpose is to create a template for most other logged pages -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/design.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title> Maps N' History </title>
+    <link rel="icon" href="{{ url_for('static', filename='gamelogo.JFIF') }}" type="image/x-icon">
+</head>
+<body>
+<section id="main">
+    <nav>
+        <div class="logo">
+            <a href="{{ url_for('starting_page') }}">Maps N' History</a>
+        </div>
+        <ul class="menu">
+            <li><a href="{{ url_for('Logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('create_map') }}">Upload Map</a></li>
+            <li><a href="{{ url_for('Template_Gallery') }}">Template Gallery</a></li>
+            <li><a href="{{ url_for('play') }}">Play</a></li>
+            <li><a href="{{ url_for('Profile') }}"> Profile </a></li>
+        </ul>
+    </nav>
+    <div class="video-container">
+        <video src="{{url_for('static', filename='bg_video/hd0941.mov')}}" muted autoplay loop></video>
+    </div>
+    {% block body %}{% endblock %}
+</section>
+</body>
+</html>

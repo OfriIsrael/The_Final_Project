@@ -1,0 +1,17 @@
+{% extends 'unlogged_basic_template.html' %}
+
+{% block body %}
+<!-- page purpose: attempt to login a user into the game  -->
+<div class="main-text">
+    <form id="SignForm" action="/unlogged_login" method="POST">
+        <label for="Username">Username:</label><br>
+        <input type="text" id="Username" name="Username" value="{{Username}}"><br>
+        <label for="Password">Password:</label><br>
+        <input type="password" id="Password" name="Password" value="{{Password}}">
+        <input type="submit" value="Submit">
+
+    </form>
+    <h2>Don't Have An Account? Register Now</h2>
+    <h3>{{msg}}</h3> <!-- here for error messages -->
+</div>
+{% endblock %}

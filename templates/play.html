@@ -1,0 +1,64 @@
+{% extends 'basic_design.html' %}
+
+{% block body %}
+<!-- page purpose: show existing maps to choose to play from -->
+
+<div class = "galleries_search">
+<label for="pages">Choose a page:</label>
+        <select id="pages" name="pages">
+        </select>
+</div>
+
+<div class="Template_gallery">
+    <div>
+        <img id=img0 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L0"></a></li>
+    </div>
+    <div>
+        <img id=img1 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L1"></a></li>
+    </div>
+    <div>
+        <img id=img2 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L2"></a></li>
+    </div>
+    <div>
+        <img id=img3 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L3"></a></li>
+    </div>
+    <div>
+        <img id=img4 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L4"></a></li>
+    </div>
+    <div>
+        <img id=img5 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L5"></a></li>
+    </div>
+    <div>
+        <img id=img6 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L6"></a></li>
+    </div>
+    <div>
+        <img id=img7 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L7"></a></li>
+    </div>
+    <div>
+        <img id=img8 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L8"></a></li>
+    </div>
+    <div>
+        <img id=img9 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L9"></a></li>
+    </div>
+    <div>
+        <img id=img10 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L10"></a></li>
+    </div>
+    <div>
+        <img id=img11 src="{{url_for('static', filename='')}}" alt="">
+        <li><a href="{{ url_for('game') }}" id="L11"></a></li>
+    </div>
+</div>
+<script src="{{url_for('static', filename='js/pm_cmds.js')}}"></script>
+{% endblock %}
+

@@ -1,0 +1,284 @@
+:root {
+	/* --main_font: "Asap", sans-serif; */
+	--main_font: "Asap", sans-serif;
+}
+
+body { /* self explanatory */
+
+
+  margin: 0px;
+  padding: 0px;
+  font-family: "Asap", sans-serif;
+  overflow: hidden;
+}
+* {
+
+  box-sizing: border-box;
+  font-family: var(--main_font);
+}
+ul {
+
+  list-style: none;
+}
+a {
+
+  text-decoration: none;
+}
+nav { /* used to describe the navigation bar at the top of the screen */
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0px 5%;
+  z-index: 1;
+}
+.logo a { /* logo's class */
+  font-weight: 700;
+  color: #00c2cb;
+  font-size: 2rem;
+}
+nav ul { /* used to describe the navigation bar at the top of the screen */
+  display: flex;
+}
+nav ul li a { /* used to describe the navigation bar at the top of the screen */
+  height: 40px;
+  line-height: 43px;
+  margin: 10px;
+  padding: 0px 30px;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0ffff;
+  transition: 0.1s;
+}
+nav ul li a:hover,
+.main-text a:hover { /* used to describe the navigation bar at the top of the screen */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  color: #fff;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.main-text{ /* used to write most texts in the game */
+  position: absolute;
+  left: 13%;
+  top: 42%;
+  transform: translate(-13%,-42%);
+  line-height: 0;
+}
+.main-text h3{ /* self-explanatory */
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #e0ffff;
+  padding: 0.675rem;
+}
+.video-container { /* container for background image */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #000;
+}
+
+.video-container video { /* describes how the background image behaves */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: brightness(0.8);
+}
+.main-text h2{ /* self-explanatory */
+  font-weight: 500;
+  font-size: 1.875rem;
+  color: #e0ffff;
+}
+.main-text h1{ /* self-explanatory */
+  font-size: 4.675rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #e0ffff;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+label {
+	color: white;
+}
+.main-text form { /* further describes main text */
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+.register_container { /* used in the registration form */
+  top: 8rem;
+}
+
+.zoom-container { /* the container for in-game pictures */
+  overflow: hidden;
+  top: 5rem;
+  width: 60rem;
+  height: 40rem;
+  position: relative;
+  z-index: 1;
+}
+
+.zoom-target > img { /* describes how the images in the game and creation look (ignore the name) */
+  width: 100%;
+  height: 100%;
+
+}
+
+.zoom-target { /* describes how the images in the game and creation look (ignore the name) */
+  position: absolute;
+  left: 0px;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.positioned-text { /* used in some places to position texts */
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #00c2cb;
+    font-family: Arial, sans-serif;
+    padding: 0.1rem;
+  }
+
+.container { /* used in most pages to show text handed data boxes */
+  position: absolute;
+  left:80vw;
+  top: 12rem;
+  width: 300px;
+  z-index:1;
+  max-width: 100%;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+input[type="text"] { /* css for most text buttons */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+input[type="email"] { /* css for email entry buttons */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+input[type="date"] { /* css for date buttons */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+input[type="submit"] { /* css for submit buttons */
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #0fcefe;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="password"] { /* css for password entry buttons */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+input[type="file"] {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #0fcefe;
+}
+
+
+.Template_gallery { /* gallery container, sort of */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    top: 10rem;
+}
+
+.Template_gallery img { /* describes an image in the gallery */
+  width: 10rem;
+  height: 15rem;
+  z-index: 1;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+#clickArea { /* describes the picture area in which a user can click */
+        width: 60rem;
+        height: 30rem;
+        background-color: lightgray;
+        border: 2px solid gray;
+}
+#SignForm { /* creates a margin in certain parts of the code */
+        margin-top: 5rem;
+    }
+
+#decently_padded > *{ /* simply pads certain texts */
+    margin-bottom: 3rem;
+}
+
+#timer{ /* used when making a timer */
+    color: #e0ffff;
+    font-size: 3rem;
+}
+
+.red-dot { /* basic dot element  */
+      position: absolute;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: grey;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+}
+
+.galleries_search{
+    position: absolute;
+    margin-top: 5rem;
+}
+
+.Template_gallery li {
+    list-style-type: none; /* Remove bullet points */
+}
+
+.Template_gallery li a {
+    color: #66D3FA;
+}

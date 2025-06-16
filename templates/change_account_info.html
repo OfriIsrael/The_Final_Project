@@ -1,0 +1,29 @@
+{% extends 'basic_design.html' %}
+
+{% block body %}
+
+<div class="main-text"> <!-- Page gets inputs of user and attempts to register him -->
+    <h4>
+        <form id="SignForm" action="/change_account_info" method="POST">
+
+            <label for="Username"> New Username:</label> <br>
+            <input type="text" id="Username" name="Username" value="{{Username}}"><br>
+
+            <label for="Password">New Password:</label><br>
+            <input type="password" id="Password" name="Password" value="{{Password}}">
+
+            <label for="Confirm_password">Confirm New Password:</label><br>
+            <input type="password" id="Confirm_password" name="Confirm_Password" value="{{Confirm_Password}}">
+
+            <label for="Email">Email:</label><br>
+            <input type="Email" id="Email" name="Email" value="{{Email}}">
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </h4>
+    <h2>Leave a box empty if you don't want to change its information</h2>
+    <h3>{{msg}}</h3> <!--shows error messages -->
+
+</div>
+{% endblock %}
