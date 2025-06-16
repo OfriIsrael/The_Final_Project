@@ -1,17 +1,27 @@
 
-# Ignore GUI and non-server components
+# Ignore IDE config and virtual environments
+.idea/
+.vscode/
+*.iml
+
+# Ignore Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore GUI and non-server files
 TKINTER.py
 Server.py
 server_cmds.py
 network_utils.py
 Client.py
-
-# Ignore folders
 Unsafe_Files/
 Unsafe_Files_Server/
 
-# Ignore virtual environments, IDE, and cache files
-venv/
-__pycache__/
-.idea/
-.git/
+# Ignore database files (optional)
+*.db
